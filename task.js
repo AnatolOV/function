@@ -72,13 +72,12 @@ function worker2(arr) {
   // Ваш код
   const max = Math.max.apply(null, numbers);
 
-  console.log(max);
   const min = Math.min.apply(null, numbers);
 
-  console.log(min);
   let minus = max - min;
 
   let minuss = Math.abs(minus);
-  console.log(minuss);
+  
+  return minuss;
 }
 worker2(numbers);
