@@ -32,22 +32,40 @@ function getArrayParams(arr) {
 getArrayParams(arr);
 
 // Задание 2
+
+var arr = [1, 2, 3];
+
 function worker(arr) {
-  let sum;
-
-  // Ваш код
-
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
   return sum;
 }
 
-function makeWork(arrOfArr, func) {
-  let max;
 
-  // Ваш кода
-  // for ...
-  
+var arrOfArr = [[1, 2, 3, 4], [10, 20, -10, -20], [1, 34, 344]];
+
+
+
+function makeWork(arrOfArr, func) {
+  let max = 0;
+
+  for (let i = 0; i < arrOfArr.length; i++) {
+    max = worker(arrOfArr[i]);
+    console.log(max + ` Сумма в массиве ${i + 1}`);
+
+    if (worker(arrOfArr[i + 1]) > worker(arrOfArr[i])) {
+      max = worker(arrOfArr[i + 1]);
+      console.log(max + ' максимальный максимум');
+    } else {
+      max = worker(arrOfArr[i]);
+    }
+
+  }
   return max;
 }
+makeWork(arrOfArr, worker);
 
 // Задание 3
 function worker2(arr) {
