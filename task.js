@@ -66,8 +66,19 @@ function makeWork(arrOfArr, func) {
   return max;
 }
 makeWork(arrOfArr, worker);
-
 // Задание 3
+var numbers = [5, 6, 2, 3, 7];
 function worker2(arr) {
   // Ваш код
+  const max = Math.max.apply(null, numbers);
+
+  console.log(max);
+  const min = Math.min.apply(null, numbers);
+
+  console.log(min);
+  let minus = max - min;
+
+  let minuss = Math.abs(minus);
+  console.log(minuss);
 }
+worker2(numbers);
