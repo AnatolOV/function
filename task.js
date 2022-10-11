@@ -1,35 +1,17 @@
 // Задание 1
-var arr = [-100, 20, 30, 55, 100];
-//let min = 1, max = 4;
+
 function getArrayParams(arr) {
-
-
-  let min = -100, max = 100, sum = 0, avg = 20;
-
+  let min = -Infinity, max = Infinity, sum = 0, avg = 20;
+  max = Math.max.apply(null, arr);
+  min = Math.min.apply(null, arr);
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i - 1]) {
-      max = arr[i];
-
-    }
-    sum += arr[i]
-    avg = (sum / i).toFixed(2);
-    avg = Number(avg);
+    sum += arr[i];
   }
-
-  console.log(max, sum, avg);
-
-  for (let j = arr.length; j > -1; j--) {
-    if (arr[j] < arr[j + 1]) {
-      min = arr[j];
-    }
-  }
-
-  console.log({ min: min, max: max, avg: avg })
-
-
+  avg = (sum / arr.length).toFixed(2);
+  avg = Number(avg);
   return { min: min, max: max, avg: avg };
 }
-getArrayParams(arr);
+
 
 // Задание 2
 
