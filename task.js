@@ -74,10 +74,7 @@ function worker2(arr) {
 
   const min = Math.min.apply(null, numbers);
 
-  let minus = max - min;
-
-  let minuss = Math.abs(minus);
-  
-  return minuss;
+  return Math.abs(max - min);
+ 
 }
 worker2(numbers);
