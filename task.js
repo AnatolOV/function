@@ -43,11 +43,11 @@ function makeWork(arrOfArr, func) {
 makeWork(arrOfArr, worker);
 
 // Задание 3
-var numbers = [5, 6, 2, 3, 7];
+
 function worker2(arr) {
   // Ваш код
-  const max = Math.max.apply(null, numbers);
 
+  const max = Math.max.apply(null, numbers);
   const min = Math.min.apply(null, numbers);
 
   return Math.abs(max - min);
