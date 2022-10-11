@@ -15,8 +15,6 @@ function getArrayParams(arr) {
 
 // Задание 2
 
-var arr = [1, 2, 3];
-
 function worker(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -24,11 +22,6 @@ function worker(arr) {
   }
   return sum;
 }
-
-
-var arrOfArr = [[1, 2, 3, 4], [10, 20, -10, -20], [1, 34, 344]];
-
-
 
 function makeWork(arrOfArr, func) {
   let max = 0;
