@@ -41,6 +41,7 @@ function makeWork(arrOfArr, func) {
   return max;
 }
 makeWork(arrOfArr, worker);
+
 // Задание 3
 var numbers = [5, 6, 2, 3, 7];
 function worker2(arr) {
@@ -52,4 +53,4 @@ function worker2(arr) {
   return Math.abs(max - min);
  
 }
-worker2(numbers);
+
