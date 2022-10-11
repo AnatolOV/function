@@ -27,20 +27,20 @@ function makeWork(arrOfArr, func) {
   let max = 0;
 
   for (let i = 0; i < arrOfArr.length; i++) {
-    max = worker(arrOfArr[i]);
+    max = func(arrOfArr[i]);
     console.log(max + ` Сумма в массиве ${i + 1}`);
 
-    if (worker(arrOfArr[i + 1]) > worker(arrOfArr[i])) {
-      max = worker(arrOfArr[i + 1]);
+    if (func(arrOfArr[i + 1]) > func(arrOfArr[i])) {
+      max = func(arrOfArr[i + 1]);
       console.log(max + ' максимальный максимум');
     } else {
-      max = worker(arrOfArr[i]);
+      max = func(arrOfArr[i]);
     }
 
   }
   return max;
 }
-makeWork(arrOfArr, worker);
+
 
 // Задание 3
 
