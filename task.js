@@ -41,8 +41,8 @@ function makeWork(arrOfArr, func) {
 function worker2(arr) {
   // Ваш код
 
-  const max = Math.max.apply(null, numbers);
-  const min = Math.min.apply(null, numbers);
+  const max = Math.max.apply(null, arr);
+  const min = Math.min.apply(null, arr);
 
   return Math.abs(max - min);
  
